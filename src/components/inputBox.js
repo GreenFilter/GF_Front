@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/react'
 import React from "react";
 
-function InputBox({margin, label, placeholder}) {
+function InputBox({margin, label, placeholder, inputMargin}) {
   return (
     <div css={css`
       font-family: 'Inter', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -27,6 +27,7 @@ function InputBox({margin, label, placeholder}) {
             font-family: 'Inter', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 1.56rem;
             padding: 0 0 0 50px;
+            margin-bottom: ${inputMargin}px;
 
             &::placeholder{
               color: #9B9B9B;
@@ -34,7 +35,7 @@ function InputBox({margin, label, placeholder}) {
             &:focus{
               outline: none;
             }
-            
+
           `}
           placeholder={`${placeholder}를 입력하세요.`} 
         />
