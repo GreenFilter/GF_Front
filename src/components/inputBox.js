@@ -27,7 +27,7 @@ function InputBox({margin, label, placeholder, inputMargin}) {
             font-family: 'Inter', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 1.56rem;
             padding: 0 0 0 50px;
-            margin-bottom: ${inputMargin}px;
+            margin: ${inputMargin};
 
             &::placeholder{
               color: #9B9B9B;
