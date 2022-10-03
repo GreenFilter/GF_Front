@@ -29,6 +29,10 @@ function InputBox({margin, label, placeholder, inputMargin}) {
             padding: 0 0 0 50px;
             margin: ${inputMargin};
 
+            @media screen and (max-width: 800px) {
+              width: 70vw;
+            }
+
             &::placeholder{
               color: #9B9B9B;
             }

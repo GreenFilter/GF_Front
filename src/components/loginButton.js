@@ -18,6 +18,10 @@ function LoginButton() {
         font-size: 1.56rem;
         font-weight: 600;
         margin-top: 61px;
+
+        @media screen and (max-width: 800px) {
+              width: 90vw;
+            }
       `}
     > 로그인
     </button>
