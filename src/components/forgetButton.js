@@ -8,7 +8,7 @@ function ForgetButton() {
       <button css={css`
         font-size: 1.07rem;
         border: 0;
-        background-color: white;
+        background-color: transparent;
         text-decoration-line: underline;
         color: #000000;
       `}>
