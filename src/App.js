@@ -1,11 +1,12 @@
 import React from "react";
-import Login from "./pages/login";
+import { Routes, Route } from "react-router-dom";
+import * as P from "./pages";
 
 function App() {
   return (
-    <div>
-      <Login />
-    </div>
+    <Routes>
+      <Route path="/login" element={<P.Login />}/>
+    </Routes>
   );
 }
 
