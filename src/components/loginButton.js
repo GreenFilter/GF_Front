@@ -3,6 +3,9 @@ import { jsx, css } from '@emotion/react'
 import React from "react";
 
 function LoginButton() {
+  function clickButton() {
+    window.location.replace ("/")
+  }
   return(
   <>
     <button css={
@@ -23,6 +26,7 @@ function LoginButton() {
               width: 90vw;
             }
       `}
+      onClick={clickButton}
     > 로그인
     </button>
   </>)
