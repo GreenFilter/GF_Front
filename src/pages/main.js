@@ -9,6 +9,7 @@ function Main() {
       display: flex;
       flex-direction: row;
     `}>
+      
       <C.Map />
       <C.Chart />
     </div>

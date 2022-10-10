@@ -8,9 +8,11 @@ function Map() {
   return(
     <div css={css`width: 50%;`}>
       <I.Logo />
+      
       <C.Kakaomap />
     </div>
   )
+
 }
 
 export default Map;
