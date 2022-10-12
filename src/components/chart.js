@@ -1,8 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react'
+import { css } from '@emotion/react'
 import React from "react";
 
 function Chart() {
+  function clickButton() {
+    window.location.replace ("/login")
+  }
   return(
     <div css={css`
         background-color: #4D9464;
@@ -19,6 +22,7 @@ function Chart() {
           flex-direction: column;
           width: 72.6%;
           margin: 0 auto;
+          margin-top: 8.06vh;
       `}>
         <button css={css`
           align-self: flex-end;
@@ -26,7 +30,17 @@ function Chart() {
           border: 0;
           color: #cfcfcf;
           font-size: 1.25rem;
-        `}>
+          margin-bottom: 3.15vh;
+
+          &:hover{
+            cursor: pointer;
+          }
+          &:active{
+            color: #afafaf;
+          }
+        `}
+        onClick={clickButton}
+        >
           로그아웃
         </button>
 
@@ -34,6 +48,7 @@ function Chart() {
           height: 90px;
           display: flex;
           justify-content: space-between;
+          margin-bottom: 3.61vh;
         `}>
           <button css={css`
             font-family: 'Inter';
@@ -44,6 +59,13 @@ function Chart() {
             border: 0; 
             border-radius: 50%;
             box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+
+            &:hover{
+              cursor: pointer;
+            }
+            &:active{
+              background: #F4F4F4;
+            }
           `}>
             start
           </button>
@@ -57,17 +79,34 @@ function Chart() {
             border: 0; 
             border-radius: 20px;
             box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+
+            &:hover{
+              cursor: pointer;
+            }
+            &:active{
+              background: #F4F4F4;
+            }
           `}>
             저장하기
           </button>
+        </div>
+        <div css={css`
+          margin: 0 auto;
+          width: 100%;
+          height: 46.94vh;
+          background: #fff;
+        `}>
+          chart
         </div>
         <span css={css`
           color: #fff;
           font-size: 1.56rem;
           text-align: center;
+          margin-top: 6.57vh;
+          line-height: 1.5rem;
         `}>
-          두둥실 님이 측정한 녹조 양은 50 입니다 <br />
-          저번 측정량 보다 10% 늘어났어요.
+          <p>두둥실 님이 측정한 녹조 양은 <span css={css`font-weight: 800;`}>50</span> 입니다</p> <br />
+          <p>저번 측정량 보다 <span css={css`font-weight: 800;`}>10%</span> 늘어났어요</p>
         </span>
 
       </div>

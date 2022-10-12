@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react'
-import React from "react";
+import { css } from '@emotion/react'
 import * as I from "../assets/svg";
 import * as C from "../components";
 
@@ -21,7 +20,7 @@ function Login() {
       <I.Logo />
       </div>
       <C.InputBox margin="49" inputMargin="33px 0 23px 0" label="ID" placeholder="아이디" />
-      <C.InputBox margin="34" inputMargin="0 0 15px 0" label="PW" placeholder="비밀번호" />
+      <C.InputBox margin="34" inputMargin="0 0 15px 0" label="PW" placeholder="비밀번호" type='password'/>
       <div css={
         css`
           width: 559px; 

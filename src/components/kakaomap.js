@@ -1,7 +1,7 @@
 /* global kakao */
 import React, { useEffect, useState } from 'react';
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react'
+import { css } from '@emotion/react'
 
 const { kakao } = window;
 
@@ -19,11 +19,17 @@ const Kakaomap = () => {
     alert("Can't find you");
   }
 
-  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+  const options = {
+    enableHighAccuracy: true,
+    maximumAge: 0,
+    timeout: Infinity
+  };
+
+  navigator.geolocation.watchPosition(onGeoOk, onGeoError, options);
   useEffect(()=>{
     console.log(lat, lon)
     const container = document.getElementById('map');
-    const options = { center: new kakao.maps.LatLng(lat, lon) };
+    const options = { center: new kakao.maps.LatLng(lat, lon), level: 2 };
     const kakaoMap = new kakao.maps.Map(container, options);
     
     const markerPosition  = new kakao.maps.LatLng(lat, lon); 
@@ -41,7 +47,7 @@ const Kakaomap = () => {
         width: 85%; 
         height: 68.06%; 
         margin: 0 auto; 
-        margin-top: 4.35%;
+        margin-top: 4.35vh;
         border-radius: 20px; 
         box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
       `}>

@@ -1,8 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react'
-import React from "react";
+import { css } from '@emotion/react'
 
-function InputBox({margin, label, placeholder, inputMargin}) {
+function InputBox({margin, label, placeholder, inputMargin, type}) {
   return (
     <div css={css`
       font-family: 'Inter', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -41,6 +40,7 @@ function InputBox({margin, label, placeholder, inputMargin}) {
             }
 
           `}
+          type={type}
           placeholder={`${placeholder}를 입력하세요.`} 
         />
     </div>
