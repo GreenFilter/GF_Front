@@ -21,6 +21,14 @@ function LoginButton() {
         font-weight: 600;
         margin-top: 61px;
 
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          
+          background: #3A754D;
+        }
+
         @media screen and (max-width: 800px) {
               width: 90vw;
             }

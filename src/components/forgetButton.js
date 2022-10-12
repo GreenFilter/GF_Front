@@ -10,6 +10,13 @@ function ForgetButton() {
         background-color: transparent;
         text-decoration-line: underline;
         color: #000000;
+
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          color: #6C6C6C;
+        }
       `}>
         비밀번호를 잊으셨나요
       </button>
