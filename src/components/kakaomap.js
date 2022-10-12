@@ -37,7 +37,15 @@ const Kakaomap = () => {
 
 
   return (
-      <div id="map" css={css`width: 89.17%; height: 735px; margin: 0 auto; border-radius: 20px; box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);`}></div>
+      <div id="map" css={css`
+        width: 85%; 
+        height: 68.06%; 
+        margin: 0 auto; 
+        margin-top: 4.35%;
+        border-radius: 20px; 
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+      `}>
+      </div>
   );
 };
 
