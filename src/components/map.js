@@ -16,7 +16,7 @@ function Map() {
       }
 
       @media screen and (max-width: 550px){
-        width: 100%px;
+        width: 100%;
       }
     `}>
       <div css={css`margin-left: 5%;`}>
