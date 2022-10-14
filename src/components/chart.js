@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import React from 'react';
+import Rechart, { amount, plma } from './rechart';
 
 function Chart() {
   function clickButton() {
@@ -12,6 +13,7 @@ function Chart() {
         background-color: #4d9464;
         width: 50%;
         height: 100vh;
+        position: relative;
 
         @media screen and (max-width: 1080px) {
           display: none;
@@ -106,9 +108,21 @@ function Chart() {
             width: 100%;
             height: 46.94vh;
             background: #fff;
+            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
           `}
         >
-          chart
+          <Rechart />
+          <div
+            css={css`
+              width: 58%;
+              height: 20px;
+              background: #fff;
+              position: absolute;
+              bottom: 31.1vh;
+              left: 25%;
+            `}
+          ></div>
         </div>
         <span
           css={css`
@@ -126,7 +140,7 @@ function Chart() {
                 font-weight: 800;
               `}
             >
-              50
+              {amount()}
             </span>{' '}
             입니다
           </p>
@@ -138,7 +152,7 @@ function Chart() {
                 font-weight: 800;
               `}
             >
-              10%
+              {plma()}
             </span>{' '}
             늘어났어요
           </p>
