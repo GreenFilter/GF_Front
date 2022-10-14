@@ -137,7 +137,8 @@ function Chart() {
             두둥실 님이 측정한 녹조량은{' '}
             <span
               css={css`
-                font-weight: 800;
+                font-size: 1.65rem;
+                font-weight: bold;
               `}
             >
               {amount()}
@@ -149,7 +150,8 @@ function Chart() {
             저번 측정량 보다{' '}
             <span
               css={css`
-                font-weight: 800;
+                font-size: 1.65rem;
+                font-weight: bold;
               `}
             >
               {plma()}
