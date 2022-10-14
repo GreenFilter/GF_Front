@@ -1,21 +1,29 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from '@emotion/react'
-import React from "react";
+import { css } from '@emotion/react';
 
 function ForgetButton() {
-  return(
+  return (
     <>
-      <button css={css`
-        font-size: 1.07rem;
-        border: 0;
-        background-color: transparent;
-        text-decoration-line: underline;
-        color: #000000;
-      `}>
+      <button
+        css={css`
+          font-size: 1.07rem;
+          border: 0;
+          background-color: transparent;
+          text-decoration-line: underline;
+          color: #000000;
+
+          &:hover {
+            cursor: pointer;
+          }
+          &:active {
+            color: #6c6c6c;
+          }
+        `}
+      >
         비밀번호를 잊으셨나요
       </button>
     </>
-  )
+  );
 }
 
 export default ForgetButton;
